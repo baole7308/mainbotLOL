@@ -1,4 +1,3 @@
-import cv2 as cv
 import pyautogui
 from ultralytics import YOLO
 import time 

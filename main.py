@@ -1,8 +1,8 @@
-from yolo import Bot
 import os
 import cv2 as cv
 import pyautogui
 import numpy as np
+from yolo import Bot
 import pynput
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 bot = Bot("LOL.pt")
@@ -20,8 +20,7 @@ def on_press(key):
             exit = True
     except AttributeError:  
         pass
-listener = pynput.keyboard.Listener(
-on_press=on_press)
+listener = pynput.keyboard.Listener(on_press=on_press)
 listener.start()
 print("Current schedule: ", bot.schedule)
 while True:
